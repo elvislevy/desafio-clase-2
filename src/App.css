@@ -58,3 +58,9 @@
   align-items: center;
 }
 
+.item button {
+  padding: 25px;
+  font-size: 20px;
+  margin: 5px;
+}
+

@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav  from "react-bootstrap/Nav";
 import Container  from "react-bootstrap/Container";
 import Icon from "./CartWidget";
 
 
-const NavbarE = (contador) => {
+const NavbarE = ({contador}) => {
     return ( 
             <Navbar bg="dark" variant="dark">
               <Container>
@@ -18,6 +18,7 @@ const NavbarE = (contador) => {
               </Container>
               <div className="icon">
                 < Icon />
+                <span>{contador}</span>
               </div>
             </Navbar>
     )
