@@ -64,3 +64,9 @@
   margin: 5px;
 }
 
+.itemListContainer {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+}
+

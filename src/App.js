@@ -1,44 +1,42 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import  NavbarE  from './components/Navbar';
-import Item from './components/ItemCount';
+import ItemList from './components/ItemList';
+import ItemListContainer from './components/ItemListContainer';
 
 
-let ListaProductos = [
+const listaproductos = [
   {
       producto: "item1",
       cantidad: 2,
+      precio: 150,
   },
   {
       producto: "item2",
       cantidad: 10,
+      precio: 150,
   },
   {
       producto: "item3",
       cantidad: 20,
+      precio: 150,
   },
   {
       producto: "item4",
       cantidad: 12,
+      precio: 150,
   },
   {
       producto: "item5",
       cantidad: 8,
+      precio: 150,
   },
   {
       producto: "item6",
       cantidad: 10,
+      precio: 150,
   },
 ]
-
-let carrito = 0
-
-function addCart(contador,producto) {
-    const prod = ListaProductos.find(i => i.producto === producto)
-    prod.cantidad -= contador
-    console.log(prod)
-    console.log(ListaProductos)
-}
 
 
 
@@ -49,10 +47,9 @@ function App() {
 
   return (
     <div className="App">
-      <NavbarE contador = {carrito}/>
-      <Item 
-        stock = {ListaProductos}
-        addCart = {addCart}
+      <NavbarE/>
+      <ItemListContainer
+        stock = {listaproductos} 
       />
     </div>
   );
